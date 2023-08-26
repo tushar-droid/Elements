@@ -13,10 +13,10 @@ body {
   justify-content: center;
 }
 .menu-container{
-    margin: 20px;
+    /* margin: 20px; */
     background-color: black;
     height: 5%;
-    width:50%;
+    width:100%;
     color: white;
     min-height: 60px;
 }

@@ -2,6 +2,7 @@ import "./styles.css";
 import homeIcon from './assets/home-icon.png'
 import aboutIcon from './assets/about-icon.png'
 import contactIcon from './assets/contact-icon.png'
+import gitIcon from './assets/git-icon.png';
 
 function CreateMenu() {
 
@@ -16,7 +17,7 @@ function CreateMenu() {
     elem.push(createMenuItems('Home', homeIcon ));
     elem.push(createMenuItems('About', aboutIcon ))
     elem.push(createMenuItems('Connect', contactIcon ))
-
+    elem.push(createMenuItems('Git', gitIcon))
     elem.forEach(el => {
         menulist.appendChild(el);
     });
