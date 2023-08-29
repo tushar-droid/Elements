@@ -3,11 +3,22 @@ import homeIcon from './assets/home-icon.png'
 import aboutIcon from './assets/about-icon.png'
 import contactIcon from './assets/contact-icon.png'
 import gitIcon from './assets/git-icon.png';
+import menuIcon from './assets/menu-icon.png'
 
-function CreateMenu() {
+export function CreateMenu() {
+
 
     const container= document.createElement('div');
     container.classList.add('menu-container');
+
+    const hamburger = document.createElement('div');
+    hamburger.textContent = 'menu';
+    hamburger.innerHTML = `<img src =${menuIcon} class='icon'>`;
+    hamburger.classList.add('hamburger-icon');
+    container.appendChild(hamburger)
+
+
+
 
 
     const menulist = document.createElement('ul');
@@ -24,6 +35,17 @@ function CreateMenu() {
 
     container.appendChild(menulist);
 
+
+    hamburger.addEventListener('click', function(){
+        menulist.classList.toggle('open-menulist');
+        container.classList.toggle('open-container');
+        // container.style.height = '100%';
+
+        // menulist.style = 'display:flex; flex-direction:column;'
+    })
+
+
+
     return container;
 }
 
@@ -31,7 +53,7 @@ function createMenuItems(name, icon){
     
     const item = document.createElement('li');
     item.classList.add('menu-item');
-
+    item.setAttribute('id', name)
 
     const itemdiv = document.createElement('div');
     itemdiv.classList.add('itemdiv');
@@ -53,5 +75,5 @@ function createMenuItems(name, icon){
     return item;
 }
 
-
 document.body.appendChild(CreateMenu());
+
