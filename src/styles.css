@@ -100,11 +100,10 @@ body {
   display: block;
   position: absolute;
   height: 5%;
-  right:4%;
-  top:1%;
+  right:8%;
+  top:0.5%;
   z-index: 1;
   transform: scale(0.7);
-
 }
 
 .open-container{
